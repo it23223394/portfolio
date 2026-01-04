@@ -12,105 +12,96 @@ const Projects = () => {
 
   const projects = [
     {
-      featured: true,
       title: 'ReadSphere',
       subtitle: 'AI-Powered Personal Reading Assistant',
-      description: 'Full-stack book management platform with AI-driven recommendations, reading tracking, and note-taking with image uploads. Features secure JWT authentication and comprehensive admin dashboard.',
+      description: 'Full-stack book management platform with AI-driven recommendations, reading tracking, and note-taking with image uploads.',
       tech: ['React.js', 'Spring Boot', 'MySQL', 'Azure Blob Storage', 'JWT'],
       highlights: [
-        'AI-powered book recommendations',
-        'Secure authentication & authorization',
-        'Cloud-based image storage',
-        'Admin dashboard for catalog management'
+        'AI-powered recommendations with secure JWT auth',
+        'Cloud image storage and admin dashboard',
+        'Reader analytics with notes and progress tracking'
       ],
       github: 'https://github.com/it23223394',
       demo: '#',
       date: 'Oct–Dec 2025',
-      gradient: 'from-blue-500 to-cyan-500',
+      gradient: 'from-blue-500 via-cyan-400 to-emerald-400',
     },
     {
-      featured: true,
       title: 'AI Study Assistant',
       subtitle: 'RAG-Based PDF Q&A System',
-      description: 'Intelligent AI tutor that answers questions from course PDFs using Retrieval-Augmented Generation with semantic search and LLM integration.',
+      description: 'Answers questions from PDFs using retrieval-augmented generation, semantic search, and LLM integration.',
       tech: ['Python', 'Streamlit', 'Groq LLM', 'RAG', 'Vector Embeddings'],
       highlights: [
-        'PDF processing pipeline',
-        'Local embeddings for document retrieval',
-        'Groq API integration',
-        'Semantic search capabilities'
+        'Chunking and embeddings pipeline for course PDFs',
+        'Groq API with guardrails for reliable answers',
+        'Search-first UI with source highlighting'
       ],
       github: 'https://github.com/it23223394',
       demo: '#',
       date: 'Jan 2026',
-      gradient: 'from-purple-500 to-pink-500',
+      gradient: 'from-purple-500 via-fuchsia-500 to-pink-400',
     },
     {
-      featured: false,
       title: 'Serene Blooms',
       subtitle: 'Floral & Event Shop',
-      description: 'Full-stack web application for floral browsing, event booking, and order management with comprehensive admin controls.',
+      description: 'Browse florals, book events, and manage orders with granular admin controls and dashboards.',
       tech: ['React.js', '.NET', 'SQL Server', 'Docker', 'Azure'],
       highlights: [
-        'Product Management module',
-        'Event booking system',
-        'Containerized deployment'
+        'Product catalog with dynamic bundles',
+        'Event booking workflows and reminders',
+        'Containerized deployment on Azure'
       ],
       github: 'https://github.com/it23223394',
       demo: '#',
       date: 'Aug–Oct 2025',
-      gradient: 'from-green-500 to-emerald-500',
+      gradient: 'from-emerald-500 via-teal-400 to-cyan-400',
     },
     {
-      featured: false,
       title: 'Restaurant Management System',
       subtitle: 'Digital Ordering & Reservations',
-      description: 'Comprehensive solution for digital ordering, reservations, menu handling, and admin dashboard with secure user management.',
+      description: 'Digital menus, table reservations, and order tracking with secure multi-role access.',
       tech: ['React.js', 'Spring Boot', 'MySQL'],
       highlights: [
-        'Secure authentication system',
-        'Real-time order tracking',
-        'Menu management'
+        'Live order status with role-based access',
+        'Menu and reservation management',
+        'Metrics dashboard for owners'
       ],
       github: 'https://github.com/it23223394',
       demo: '#',
       date: 'Feb–May 2025',
-      gradient: 'from-orange-500 to-red-500',
+      gradient: 'from-amber-500 via-orange-500 to-red-500',
     },
     {
-      featured: false,
-      title: 'Fault-Tolerant Distributed Messaging System',
-      subtitle: 'Distributed Systems Project',
-      description: 'Built a distributed messaging platform with leader election, replication, and fault recovery mechanisms.',
+      title: 'Distributed Messaging System',
+      subtitle: 'Fault-Tolerant Messaging',
+      description: 'Leader election, replication, and recovery for a resilient distributed messaging platform.',
       tech: ['Java', 'Distributed Systems', 'Fault Tolerance'],
       highlights: [
-        'Leader election algorithm',
-        'Data replication',
-        'Automatic fault recovery'
+        'Raft-inspired leader election',
+        'Replica synchronization and healing',
+        'Chaos testing for node failures'
       ],
       github: 'https://github.com/it23223394',
+      demo: '#',
       date: 'Feb–May 2025',
-      gradient: 'from-indigo-500 to-purple-500',
+      gradient: 'from-indigo-500 via-violet-500 to-purple-500',
     },
     {
-      featured: false,
       title: 'Dogwood Flora',
       subtitle: 'Online Floral Shop',
-      description: 'Web system for flower shop to manage products, orders, and inventory, improving customer experience and operational efficiency.',
+      description: 'Inventory-first flower shop system with streamlined orders and customer experience.',
       tech: ['React.js', 'Spring Boot', 'MySQL'],
       highlights: [
-        'CRUD operations for products',
-        'Inventory management',
-        'Order processing'
+        'Inventory-aware product pages',
+        'Order processing with status updates',
+        'Admin CRUD with activity logs'
       ],
       github: 'https://github.com/it23223394',
+      demo: '#',
       date: 'Jul–Nov 2024',
-      gradient: 'from-pink-500 to-rose-500',
+      gradient: 'from-rose-500 via-pink-500 to-orange-400',
     },
   ]
-
-  const featuredProjects = projects.filter(p => p.featured)
-  const otherProjects = projects.filter(p => !p.featured)
 
   return (
     <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800/50" ref={ref}>
@@ -130,143 +121,77 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        {/* Featured Projects */}
-        <div className="space-y-12 mb-16">
-          {featuredProjects.map((project, index) => (
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-shadow"
+              transition={{ duration: 0.6, delay: index * 0.08 }}
+              className="group relative overflow-hidden rounded-2xl border border-gray-200/80 dark:border-gray-700/80 bg-white/80 dark:bg-gray-800/80 shadow-[0_20px_60px_-24px_rgba(0,0,0,0.35)] backdrop-blur"
             >
-              <div className="md:flex">
-                {/* Project Visual */}
-                <div className={`md:w-2/5 bg-gradient-to-br ${project.gradient} p-8 flex items-center justify-center relative`}>
-                  <div className="text-white text-center">
-                    <Sparkles size={64} className="mx-auto mb-4 animate-float" />
-                    <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-sm opacity-90">{project.date}</p>
+              <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${project.gradient} blur-3xl`}></div>
+              <div className="relative p-6 flex flex-col gap-4">
+                <div className="flex items-center justify-between gap-3">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400">{project.date}</p>
+                    <h3 className="text-2xl font-bold mt-2 text-gray-900 dark:text-gray-50">{project.title}</h3>
+                    <p className="text-primary-500 font-semibold text-sm">{project.subtitle}</p>
+                  </div>
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradient} flex items-center justify-center text-white shadow-lg`}>
+                    <Sparkles size={22} />
                   </div>
                 </div>
 
-                {/* Project Details */}
-                <div className="md:w-3/5 p-8">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                      <p className="text-primary-500 font-semibold mb-3">{project.subtitle}</p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-600 dark:text-gray-400 mb-4">
-                    {project.description}
-                  </p>
-
-                  {/* Highlights */}
-                  <ul className="space-y-2 mb-4">
-                    {project.highlights.map((highlight, i) => (
-                      <li key={i} className="flex items-start text-sm text-gray-600 dark:text-gray-400">
-                        <span className="text-primary-500 mr-2">▸</span>
-                        {highlight}
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-xs font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Links */}
-                  <div className="flex gap-4">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition-colors"
-                    >
-                      <Github size={18} />
-                      Code
-                    </a>
-                    {project.demo && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors"
-                      >
-                        <ExternalLink size={18} />
-                        Live Demo
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Other Projects */}
-        <div>
-          <h3 className="text-3xl font-bold mb-8 text-center">Other Notable Projects</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {otherProjects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all hover:scale-[1.02]"
-              >
-                <div className={`w-12 h-12 bg-gradient-to-br ${project.gradient} rounded-lg mb-4`}></div>
-                <h4 className="text-xl font-bold mb-2">{project.title}</h4>
-                <p className="text-sm text-primary-500 font-semibold mb-2">{project.subtitle}</p>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">{project.date}</p>
-                <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
                   {project.description}
                 </p>
 
-                {/* Highlights */}
-                <ul className="space-y-1 mb-4">
+                <div className="space-y-2">
                   {project.highlights.map((highlight, i) => (
-                    <li key={i} className="flex items-start text-xs text-gray-600 dark:text-gray-400">
-                      <span className="text-primary-500 mr-2">▸</span>
-                      {highlight}
-                    </li>
+                    <div key={i} className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-200">
+                      <span className="mt-1 h-2 w-2 rounded-full bg-primary-500" aria-hidden />
+                      <span>{highlight}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs"
+                      className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-primary-500 hover:text-primary-600 font-medium text-sm"
-                >
-                  <Github size={16} />
-                  View Code
-                </a>
-              </motion.div>
-            ))}
-          </div>
+                <div className="flex flex-wrap gap-3 pt-2">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-900 text-white hover:bg-primary-600 transition-colors"
+                  >
+                    <Github size={18} />
+                    Code
+                  </a>
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary-500 text-primary-600 dark:text-primary-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-colors"
+                    >
+                      <ExternalLink size={18} />
+                      Live Demo
+                    </a>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, Download, ArrowDown } from 'lucide-react'
+import Image from 'next/image'
 
 const Hero = () => {
   const socialLinks = [
@@ -9,6 +10,8 @@ const Hero = () => {
     { icon: Linkedin, href: 'https://www.linkedin.com/in/sahaji-perera-71a7b5345', label: 'LinkedIn' },
     { icon: Mail, href: 'mailto:sahajiperera@gmail.com', label: 'Email' },
   ]
+
+  const profilePhoto = 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80'
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
@@ -47,7 +50,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-2xl md:text-4xl font-semibold mb-6 text-gray-700 dark:text-gray-300"
           >
-            Computer Science Student & Full-Stack Developer
+            Computer Science Student crafting AI-first products
           </motion.h2>
 
           {/* Tagline */}
@@ -57,10 +60,30 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto"
           >
-            Building AI-powered solutions and scalable web applications
+            Building AI-powered solutions and scalable web applications.
             <br />
-            <span className="text-primary-500 font-medium">Seeking Software Engineering Internship</span>
+            <span className="text-primary-500 font-medium">Open to Software Engineering internships.</span>
           </motion.p>
+
+          {/* Profile photo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
+            className="flex justify-center mb-12"
+          >
+            <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-3xl overflow-hidden shadow-xl ring-4 ring-primary-200/60 dark:ring-primary-900/50">
+              <Image
+                src={profilePhoto}
+                alt="Portrait of Sahaji Perera"
+                fill
+                sizes="(min-width: 768px) 12rem, 10rem"
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/25 to-transparent" aria-hidden></div>
+            </div>
+          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
@@ -114,7 +137,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Scroll Down Indicator */}
-          <motion.div
+            <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
