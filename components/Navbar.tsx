@@ -39,7 +39,7 @@ const Navbar = () => {
           {/* Logo */}
           <motion.a
             href="#"
-            className="text-2xl font-bold bg-gradient-to-r from-amber-500 via-rose-500 to-orange-500 bg-clip-text text-transparent"
+            className="text-2xl font-bold bg-gradient-to-r from-primary-500 via-blue-500 to-cyan-400 bg-clip-text text-transparent"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}

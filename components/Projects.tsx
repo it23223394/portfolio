@@ -128,9 +128,10 @@ const Projects = () => {
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.08 }}
-              className="group relative overflow-hidden rounded-2xl border border-gray-200/80 dark:border-gray-700/80 bg-white/80 dark:bg-gray-800/80 shadow-[0_20px_60px_-24px_rgba(0,0,0,0.35)] backdrop-blur"
+              viewport={{ once: true, amount: 0.2 }}
+              className="group relative overflow-hidden rounded-2xl border border-gray-200/80 dark:border-gray-700/80 bg-white/90 dark:bg-gray-800/90 shadow-[0_20px_60px_-24px_rgba(0,0,0,0.35)] backdrop-blur transition-all duration-400 hover:-translate-y-1.5 hover:shadow-2xl hover:border-primary-300 dark:hover:border-primary-500"
             >
-              <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${project.gradient} blur-3xl`}></div>
+              <div className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${project.gradient} opacity-60 group-hover:opacity-100 transition-opacity duration-500`}></div>
               <div className="relative p-6 flex flex-col gap-4">
                 <div className="flex items-center justify-between gap-3">
                   <div>
@@ -138,7 +139,7 @@ const Projects = () => {
                     <h3 className="text-2xl font-bold mt-2 text-gray-900 dark:text-gray-50">{project.title}</h3>
                     <p className="text-primary-500 font-semibold text-sm">{project.subtitle}</p>
                   </div>
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradient} flex items-center justify-center text-white shadow-lg`}>
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradient} flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform`}>
                     <Sparkles size={22} />
                   </div>
                 </div>

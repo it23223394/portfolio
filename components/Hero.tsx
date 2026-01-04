@@ -38,7 +38,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-amber-500 via-rose-500 to-orange-500 bg-clip-text text-transparent"
+            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary-500 via-blue-500 to-cyan-400 bg-clip-text text-transparent"
           >
             Sahaji Perera
           </motion.h1>

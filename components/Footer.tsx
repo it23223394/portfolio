@@ -25,7 +25,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-amber-500 via-rose-500 to-orange-500 bg-clip-text text-transparent mb-4">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-primary-500 via-blue-500 to-cyan-400 bg-clip-text text-transparent mb-4">
               Sahaji Perera
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
