@@ -27,7 +27,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="mb-4"
           >
-            <span className="text-primary-500 font-semibold text-lg">Hi, I'm</span>
+            <span className="text-primary-500 font-semibold text-lg">Hi, I&apos;m</span>
           </motion.div>
 
           {/* Name */}
@@ -98,7 +98,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="flex justify-center gap-6 mb-16"
           >
-            {socialLinks.map((social, index) => (
+            {socialLinks.map((social) => (
               <motion.a
                 key={social.label}
                 href={social.href}
@@ -117,7 +117,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
             className="flex justify-center"
           >
             <motion.a

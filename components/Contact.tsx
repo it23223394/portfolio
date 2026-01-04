@@ -79,7 +79,7 @@ const Contact = () => {
           </h2>
           <div className="w-20 h-1 bg-primary-500 mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            I'm currently seeking a Software Engineering Internship. Feel free to reach out for opportunities, collaborations, or just to say hi!
+            I&apos;m currently seeking a Software Engineering Internship. Feel free to reach out for opportunities, collaborations, or just to say hi!
           </p>
         </motion.div>
 

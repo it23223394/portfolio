@@ -59,13 +59,13 @@ const About = () => {
               Building the Future, One Line at a Time
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-              I'm a 3rd-year Computer Science undergraduate at SLIIT with a passion for creating 
+              I&apos;m a 3rd-year Computer Science undergraduate at SLIIT with a passion for creating 
               innovative solutions that make a difference. My journey in tech started with curiosity 
               and has evolved into a dedicated pursuit of excellence in software engineering.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
               From building AI-powered reading assistants to developing distributed messaging systems, 
-              I thrive on challenges that push the boundaries of what's possible. I'm particularly 
+              I thrive on challenges that push the boundaries of what&apos;s possible. I&apos;m particularly 
               interested in the intersection of AI, web development, and data analytics.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
