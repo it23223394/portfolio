@@ -11,7 +11,7 @@ const Hero = () => {
     { icon: Mail, href: 'mailto:sahajiperera@gmail.com', label: 'Email' },
   ]
 
-  const profilePhoto = 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80'
+  const profilePhoto = '/sahaji.jpeg'
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
@@ -38,7 +38,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary-500 via-purple-500 to-primary-600 bg-clip-text text-transparent"
+            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-amber-500 via-rose-500 to-orange-500 bg-clip-text text-transparent"
           >
             Sahaji Perera
           </motion.h1>
@@ -50,7 +50,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-2xl md:text-4xl font-semibold mb-6 text-gray-700 dark:text-gray-300"
           >
-            Computer Science Student crafting AI-first products
+            Computer Science Undergraduate
           </motion.h2>
 
           {/* Tagline */}
@@ -72,7 +72,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.35 }}
             className="flex justify-center mb-12"
           >
-            <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-3xl overflow-hidden shadow-xl ring-4 ring-primary-200/60 dark:ring-primary-900/50">
+            <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shadow-xl ring-4 ring-primary-200/60 dark:ring-primary-900/50 bg-gray-100 dark:bg-gray-800">
               <Image
                 src={profilePhoto}
                 alt="Portrait of Sahaji Perera"
@@ -81,7 +81,6 @@ const Hero = () => {
                 className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/25 to-transparent" aria-hidden></div>
             </div>
           </motion.div>
 
