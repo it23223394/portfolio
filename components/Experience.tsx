@@ -84,23 +84,23 @@ const Experience = () => {
             initial={{ opacity: 0, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-gradient-to-br from-primary-500 to-purple-600 p-8 rounded-2xl text-white shadow-xl"
+            className="bg-gradient-to-br from-gray-900 via-slate-900 to-blue-800 p-8 rounded-2xl text-white shadow-xl border border-white/10"
           >
             <div className="flex items-start gap-4 mb-4">
-              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
                 <education.icon size={24} />
               </div>
               <div className="flex-1">
                 <div className="flex justify-between items-start mb-2">
                   <div>
-                    <h3 className="text-2xl font-bold mb-1">{education.degree}</h3>
-                    <p className="text-white/90 font-medium">{education.university}</p>
+                    <h3 className="text-2xl font-bold mb-1 text-white/90">{education.degree}</h3>
+                    <p className="text-white/70 font-medium">{education.university}</p>
                   </div>
-                  <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-medium">
+                  <span className="px-3 py-1 bg-white/10 rounded-full text-sm font-medium text-white/80">
                     {education.status}
                   </span>
                 </div>
-                <p className="text-white/80 text-sm">{education.period}</p>
+                <p className="text-white/70 text-sm">{education.period}</p>
               </div>
             </div>
           </motion.div>
