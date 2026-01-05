@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { GraduationCap, Award, Users } from 'lucide-react'
+import { GraduationCap, Award, Users, Download } from 'lucide-react'
 
 const Experience = () => {
   const [ref, inView] = useInView({
@@ -32,21 +32,25 @@ const Experience = () => {
     {
       title: 'Python for Beginners',
       issuer: 'University of Moratuwa (CODL)',
+      pdf: '/certs/python-beginners.pdf',
       icon: Award,
     },
     {
       title: 'Python Programming',
       issuer: 'University of Moratuwa (CODL)',
+      pdf: '/certs/python-programming.pdf',
       icon: Award,
     },
     {
       title: 'Introduction to Java',
       issuer: 'Sololearn',
+      pdf: '/certs/java-intro.pdf',
       icon: Award,
     },
     {
       title: 'Upper-Intermediate English Course',
       issuer: 'British Council Sri Lanka',
+      pdf: '/certs/english-course.pdf',
       icon: Award,
     },
   ]
@@ -141,23 +145,26 @@ const Experience = () => {
           <h3 className="text-3xl font-bold mb-6 text-center">Certifications</h3>
           <div className="grid md:grid-cols-2 gap-4">
             {certifications.map((cert, index) => (
-              <motion.div
+              <motion.a
                 key={cert.title}
+                href={cert.pdf}
+                download
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-                className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow"
+                className="group bg-white/80 dark:bg-gray-800/90 p-6 rounded-xl border border-gray-200 dark:border-gray-700 shadow-[0_20px_60px_-40px_rgba(0,0,0,0.55)] backdrop-blur hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                     <cert.icon className="text-primary-500" size={20} />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h4 className="font-bold mb-1">{cert.title}</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">{cert.issuer}</p>
                   </div>
+                  <Download size={18} className="text-gray-400 group-hover:text-primary-500 transition-colors flex-shrink-0 mt-1" aria-hidden />
                 </div>
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </motion.div>
