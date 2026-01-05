@@ -51,7 +51,7 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.18 }}
               className="text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-200"
             >
-              Computer Science Undergraduate crafting thoughtful, AI-forward products
+              Computer Science Undergraduate
             </motion.h2>
 
             <motion.p

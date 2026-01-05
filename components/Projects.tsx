@@ -37,7 +37,7 @@ const Projects = () => {
         'Search-first UI with source highlighting'
       ],
       github: 'https://github.com/it23223394',
-      demo: '#',
+      demo: 'https://ai-study-assistant-crqnrkbffdabry9uxyjc7z.streamlit.app/',
       date: 'Jan 2026',
       gradient: 'from-purple-500 via-fuchsia-500 to-pink-400',
     },
