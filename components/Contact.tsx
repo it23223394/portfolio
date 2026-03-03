@@ -21,22 +21,30 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    const { name, email, message } = formData
+    setStatus('sending')
     
-    // Create mailto link and open it
-    const subject = encodeURIComponent(`Portfolio Message from ${name}`)
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)
-    const mailtoLink = `mailto:sahajiperera@gmail.com?subject=${subject}&body=${body}`
-    
-    // Create and click a temporary link for better compatibility
-    const link = document.createElement('a')
-    link.href = mailtoLink
-    link.click()
-    
-    // Show success message
-    setStatus('success')
-    setFormData({ name: '', email: '', message: '' })
-    setTimeout(() => setStatus(''), 3000)
+    try {
+      const response = await fetch('https://formspree.io/f/xwvndwrr', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      
+      if (response.ok) {
+        setStatus('success')
+        setFormData({ name: '', email: '', message: '' })
+        setTimeout(() => setStatus(''), 3000)
+      } else {
+        setStatus('error')
+        setTimeout(() => setStatus(''), 3000)
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setStatus('error')
+      setTimeout(() => setStatus(''), 3000)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -204,12 +212,16 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="w-full px-6 py-3 bg-primary-500 text-white rounded-lg font-semibold hover:bg-primary-600 transition-all hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className={`w-full px-6 py-3 rounded-lg font-semibold transition-all hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-white ${
+                    status === 'error' ? 'bg-red-500 hover:bg-red-600' : 'bg-primary-500 hover:bg-primary-600'
+                  }`}
                 >
                   {status === 'sending' ? (
                     'Sending...'
                   ) : status === 'success' ? (
                     '✓ Message Sent!'
+                  ) : status === 'error' ? (
+                    '✗ Failed to Send. Try again.'
                   ) : (
                     <>
                       <Send size={20} />
