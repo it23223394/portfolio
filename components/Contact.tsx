@@ -28,7 +28,10 @@ const Contact = () => {
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)
     const mailtoLink = `mailto:sahajiperera@gmail.com?subject=${subject}&body=${body}`
     
-    window.location.href = mailtoLink
+    // Create and click a temporary link for better compatibility
+    const link = document.createElement('a')
+    link.href = mailtoLink
+    link.click()
     
     // Show success message
     setStatus('success')
@@ -84,7 +87,7 @@ const Contact = () => {
           </h2>
           <div className="w-20 h-1 bg-primary-500 mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            I&apos;m currently seeking a Software Engineering Internship. Feel free to reach out for opportunities, collaborations, or just to say hi!
+            I&apos;m currently seeking a Data Analyst Internship. Feel free to reach out for opportunities, collaborations, or just to say hi!
           </p>
         </motion.div>
 

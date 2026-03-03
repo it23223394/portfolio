@@ -51,7 +51,7 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.18 }}
               className="text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-200"
             >
-              Computer Science Undergraduate
+              Intern Data Analyst
             </motion.h2>
 
             <motion.p
@@ -60,7 +60,7 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.26 }}
               className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl"
             >
-              I blend product thinking with full-stack engineering—shipping interfaces that feel polished and reliable systems behind them. Currently open to Software Engineering internships.
+              I transform raw data into actionable insights using Python, SQL, and Power BI. Passionate about statistical analysis, data visualization, and supporting data-driven decision-making. Currently seeking opportunities to apply analytical skills in real-world projects.
             </motion.p>
 
             {/* Badges */}
@@ -70,7 +70,7 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.32 }}
               className="flex flex-wrap gap-3"
             >
-              {["AI-first builds", "Full-stack delivery", "Systems mindset"].map((label) => (
+              {["Data Analytics", "Statistical Analysis", "Dashboard Design"].map((label) => (
                 <span
                   key={label}
                   className="px-4 py-2 rounded-xl bg-white/70 dark:bg-gray-900/60 border border-gray-200/70 dark:border-gray-700/70 shadow-sm text-sm font-medium text-gray-800 dark:text-gray-100"
@@ -154,7 +154,7 @@ const Hero = () => {
                 </div>
 
                 <div className="mt-6 grid grid-cols-3 gap-3 text-center text-sm text-gray-700 dark:text-gray-200">
-                  {[{ label: 'Projects', value: '6+' }, { label: 'Tech Stack', value: '10+' }, { label: 'RAG/AI', value: 'Hands-on' }].map((item) => (
+                  {[{ label: 'Projects', value: '4+' }, { label: 'Tech Stack', value: '8+' }, { label: 'Analytics', value: 'Expert' }].map((item) => (
                     <div key={item.label} className="rounded-2xl bg-gray-50 dark:bg-gray-800/70 border border-gray-200 dark:border-gray-700 py-3">
                       <div className="text-lg font-bold text-blue-600 dark:text-blue-300">{item.value}</div>
                       <div className="text-xs text-gray-500 dark:text-gray-400">{item.label}</div>
@@ -164,7 +164,7 @@ const Hero = () => {
 
                 <div className="mt-4 rounded-2xl border border-dashed border-blue-200 dark:border-blue-800 bg-blue-50/60 dark:bg-blue-900/20 p-4 text-sm text-blue-900 dark:text-blue-100 flex items-center gap-3">
                   <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" aria-hidden />
-                  Actively seeking a Software Engineering Internship
+                  Actively seeking a Data Analytics Internship
                 </div>
               </div>
             </div>

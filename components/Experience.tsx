@@ -32,13 +32,13 @@ const Experience = () => {
     {
       title: 'Foundations: Data, Data, Everywhere',
       issuer: 'Google Career Certificates',
-      pdf: '/certs/google-data.pdf',
+      pdf: '/certs/Foundations-data%20data%20everywhere.pdf',
       icon: Award,
     },
     {
       title: 'Data Analyst 101',
       issuer: 'Microsoft & Simplilearn',
-      pdf: '/certs/data-analyst-101.pdf',
+      pdf: '/certs/Data%20Analyst%20101.pdf',
       icon: Award,
     },
     {
