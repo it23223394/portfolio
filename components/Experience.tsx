@@ -44,7 +44,7 @@ const Experience = () => {
     {
       title: 'Introduction to Data Analytics',
       issuer: 'Simplilearn SkillUp',
-      pdf: '/certs/data-analytics-intro.pdf',
+      pdf: '/certs/Introduction%20to%20Data%20Analytics.pdf',
       icon: Award,
     },
     {
