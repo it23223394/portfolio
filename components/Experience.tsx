@@ -30,9 +30,21 @@ const Experience = () => {
 
   const certifications = [
     {
-      title: 'Python for Beginners',
-      issuer: 'University of Moratuwa (CODL)',
-      pdf: '/certs/python-beginners.pdf',
+      title: 'Foundations: Data, Data, Everywhere',
+      issuer: 'Google Career Certificates',
+      pdf: '/certs/google-data.pdf',
+      icon: Award,
+    },
+    {
+      title: 'Data Analyst 101',
+      issuer: 'Microsoft & Simplilearn',
+      pdf: '/certs/data-analyst-101.pdf',
+      icon: Award,
+    },
+    {
+      title: 'Introduction to Data Analytics',
+      issuer: 'Simplilearn SkillUp',
+      pdf: '/certs/data-analytics-intro.pdf',
       icon: Award,
     },
     {
@@ -42,9 +54,9 @@ const Experience = () => {
       icon: Award,
     },
     {
-      title: 'Introduction to Java',
-      issuer: 'Sololearn',
-      pdf: '/certs/java-intro.pdf',
+      title: 'Python for Beginners',
+      issuer: 'University of Moratuwa (CODL)',
+      pdf: '/certs/python-beginners.pdf',
       icon: Award,
     },
     {

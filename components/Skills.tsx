@@ -11,60 +11,62 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      category: 'Languages',
+      category: 'Programming Languages',
       skills: [
-        { name: 'Java', level: 85 },
-        { name: 'Python', level: 80 },
-        { name: 'JavaScript', level: 85 },
-        { name: 'C/C++', level: 70 },
-        { name: 'C#', level: 75 },
+        { name: 'Python', level: 90 },
+        { name: 'SQL', level: 85 },
+        { name: 'JavaScript', level: 75 },
+        { name: 'Java', level: 70 },
       ],
     },
     {
-      category: 'Frontend',
+      category: 'Data Analysis & Libraries',
       skills: [
-        { name: 'React.js', level: 90 },
-        { name: 'HTML/CSS', level: 90 },
-        { name: 'Tailwind CSS', level: 85 },
-        { name: 'Next.js', level: 75 },
+        { name: 'Pandas', level: 90 },
+        { name: 'NumPy', level: 85 },
+        { name: 'Scikit-learn', level: 80 },
+        { name: 'SciPy & Statistics', level: 85 },
       ],
     },
     {
-      category: 'Backend',
+      category: 'Data Visualization',
       skills: [
-        { name: 'Spring Boot', level: 85 },
-        { name: '.NET', level: 80 },
-        { name: 'RESTful APIs', level: 85 },
+        { name: 'Power BI', level: 85 },
+        { name: 'Excel Dashboards', level: 90 },
+        { name: 'Matplotlib', level: 85 },
+        { name: 'Plotly & Dash', level: 80 },
       ],
     },
     {
-      category: 'Database',
+      category: 'Databases',
       skills: [
         { name: 'MySQL', level: 85 },
         { name: 'SQL Server', level: 80 },
+        { name: 'Database Design', level: 80 },
       ],
     },
     {
-      category: 'Cloud & DevOps',
+      category: 'Analytics Tools & Platforms',
       skills: [
-        { name: 'Azure', level: 75 },
-        { name: 'Docker', level: 70 },
+        { name: 'Jupyter Notebook', level: 90 },
         { name: 'GitHub', level: 85 },
+        { name: 'Microsoft Azure', level: 70 },
+        { name: 'Statistical Analysis', level: 85 },
       ],
     },
     {
-      category: 'AI & Concepts',
+      category: 'Soft Skills',
       skills: [
-        { name: 'RAG Systems', level: 75 },
-        { name: 'LLM Integration', level: 70 },
-        { name: 'Distributed Systems', level: 75 },
-        { name: 'Agile', level: 80 },
+        { name: 'Analytical Thinking', level: 90 },
+        { name: 'Problem Solving', level: 85 },
+        { name: 'Data Storytelling', level: 80 },
+        { name: 'Communication', level: 85 },
       ],
     },
   ]
 
   const tools = [
-    'GitHub', 'Figma', 'VS Code', 'IntelliJ IDEA', 'Postman', 'Azure Portal', 'Streamlit'
+    'Python', 'SQL', 'Power BI', 'Excel', 'Jupyter', 'GitHub', 'Pandas', 'Matplotlib'
   ]
 
   return (
@@ -82,7 +84,7 @@ const Skills = () => {
           </h2>
           <div className="w-20 h-1 bg-primary-500 mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            A comprehensive toolkit for building modern, scalable applications
+            A comprehensive toolkit for data analytics, visualization, and statistical analysis
           </p>
         </motion.div>
 

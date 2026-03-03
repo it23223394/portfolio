@@ -13,23 +13,23 @@ const About = () => {
   const highlights = [
     {
       icon: Code2,
-      title: 'Full-Stack Development',
-      description: 'Experienced in building scalable web applications with React, Spring Boot, and .NET',
+      title: 'Data Analytics',
+      description: 'Proficient in Python (Pandas, NumPy, Scikit-learn) and SQL for data cleaning, statistical analysis, and predictive modeling',
     },
     {
       icon: Brain,
-      title: 'AI & Innovation',
-      description: 'Passionate about AI, RAG systems, and emerging technologies',
+      title: 'Data Visualization',
+      description: 'Expert in Power BI dashboards, Excel reporting, and Python visualization tools (Matplotlib, Plotly, Dash)',
     },
     {
       icon: Rocket,
-      title: 'Fast Learner',
-      description: 'Quick to adapt and eager to explore new technologies and frameworks',
+      title: 'Statistical Analysis',
+      description: 'Strong foundation in hypothesis testing, feature engineering, and deriving actionable insights from data',
     },
     {
       icon: Users,
-      title: 'Team Player',
-      description: 'Collaborative mindset with strong problem-solving and communication skills',
+      title: 'Problem Solving',
+      description: 'Analytical mindset with excellent communication skills for presenting insights to stakeholders',
     },
   ]
 
@@ -56,37 +56,37 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Building the Future, One Line at a Time
+              Turning Data into Insights
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-              I&apos;m a 3rd-year Computer Science undergraduate at SLIIT with a passion for creating 
-              innovative solutions that make a difference. My journey in tech started with curiosity 
-              and has evolved into a dedicated pursuit of excellence in software engineering.
+              I&apos;m a 3rd-year Computer Science student at SLIIT with a strong focus on data analytics.
+              My journey has led me from full-stack development to discovering my passion for transforming 
+              raw data into meaningful insights that drive decision-making.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-              From building AI-powered reading assistants to developing distributed messaging systems, 
-              I thrive on challenges that push the boundaries of what&apos;s possible. I&apos;m particularly 
-              interested in the intersection of AI, web development, and data analytics.
+              I specialize in Python-based analytics, SQL querying, statistical analysis, and creating 
+              interactive dashboards using Power BI and modern visualization tools. Whether analyzing 
+              hospital appointment patterns or LinkedIn job market trends, I thrive on extracting stories 
+              from data.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-              Currently seeking a <span className="text-primary-500 font-semibold">Software Engineering Internship</span> where 
-              I can contribute to meaningful projects, learn from experienced professionals, and grow 
-              as a developer.
+              Currently seeking a <span className="text-primary-500 font-semibold">Data Analytics Internship</span> where 
+              I can apply my analytical skills to real-world projects and contribute to data-driven insights.
             </p>
 
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-4 mt-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-500">6+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Projects</div>
+                <div className="text-3xl font-bold text-primary-500">4+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Data Projects</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-500">10+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Technologies</div>
+                <div className="text-3xl font-bold text-primary-500">110K+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Records Analyzed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-500">3rd</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Year Student</div>
+                <div className="text-3xl font-bold text-primary-500">8+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Tech Tools</div>
               </div>
             </div>
           </motion.div>

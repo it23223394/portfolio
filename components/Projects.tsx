@@ -12,94 +12,64 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'ReadSphere',
-      subtitle: 'AI-Powered Personal Reading Assistant',
-      description: 'Full-stack book management platform with AI-driven recommendations, reading tracking, and note-taking with image uploads.',
-      tech: ['React.js', 'Spring Boot', 'MySQL', 'Azure Blob Storage', 'JWT'],
+      title: 'Hospital Appointment No-Show Analysis',
+      subtitle: 'Predictive Risk Modeling & Insights',
+      description: 'Analyzed 110,000+ patient records to identify factors influencing appointment absenteeism. Built predictive models and interactive dashboards for operational decision-making.',
+      tech: ['Python', 'Pandas', 'SQL', 'Scikit-learn', 'Plotly Dash', 'Statistical Analysis'],
       highlights: [
-        'AI-powered recommendations with secure JWT auth',
-        'Cloud image storage and admin dashboard',
-        'Reader analytics with notes and progress tracking'
+        'Analyzed 110K+ patient records for no-show patterns',
+        'Found SMS reminders reduced no-shows by 6.9 percentage points',
+        'Built interactive dashboard for operational insights'
       ],
       github: 'https://github.com/it23223394',
       demo: '#',
-      date: 'Oct–Dec 2025',
+      date: 'Jan 2026',
       gradient: 'from-blue-500 via-cyan-400 to-emerald-400',
     },
     {
-      title: 'AI Study Assistant',
-      subtitle: 'RAG-Based PDF Q&A System',
-      description: 'Answers questions from PDFs using retrieval-augmented generation, semantic search, and LLM integration.',
-      tech: ['Python', 'Streamlit', 'Groq LLM', 'RAG', 'Vector Embeddings'],
+      title: 'LinkedIn Job Market Analysis',
+      subtitle: 'Workforce Trends & Salary Insights',
+      description: 'Cleaned and standardized large job-posting datasets. Analyzed salary trends, remote work patterns, and role demand using statistical techniques.',
+      tech: ['Python', 'Pandas', 'Jupyter Notebook', 'Matplotlib', 'WordCloud'],
       highlights: [
-        'Chunking and embeddings pipeline for course PDFs',
-        'Groq API with guardrails for reliable answers',
-        'Search-first UI with source highlighting'
+        'Cleaned & standardized job-posting datasets with duplicate detection',
+        'Analyzed salary trends and remote work patterns',
+        'Generated visual reports for workforce trend analysis'
       ],
       github: 'https://github.com/it23223394',
-      demo: 'https://ai-study-assistant-crqnrkbffdabry9uxyjc7z.streamlit.app/',
+      demo: '#',
       date: 'Jan 2026',
       gradient: 'from-purple-500 via-fuchsia-500 to-pink-400',
     },
     {
-      title: 'Serene Blooms',
-      subtitle: 'Floral & Event Shop',
-      description: 'Browse florals, book events, and manage orders with granular admin controls and dashboards.',
-      tech: ['React.js', '.NET', 'SQL Server', 'Docker', 'Azure'],
+      title: 'Workplace Productivity & Well-Being Analysis',
+      subtitle: 'Employee Survey Statistical Study',
+      description: 'Analyzed survey data from 80 HORDI employees to study relationships between grievance management, job satisfaction, and productivity.',
+      tech: ['Python', 'Jupyter Notebook', 'Pandas', 'NumPy', 'SciPy', 'Matplotlib', 'Seaborn'],
       highlights: [
-        'Product catalog with dynamic bundles',
-        'Event booking workflows and reminders',
-        'Containerized deployment on Azure'
-      ],
-      github: 'https://github.com/it23223394',
-      demo: '#',
-      date: 'Aug–Oct 2025',
-      gradient: 'from-emerald-500 via-teal-400 to-cyan-400',
-    },
-    {
-      title: 'Restaurant Management System',
-      subtitle: 'Digital Ordering & Reservations',
-      description: 'Digital menus, table reservations, and order tracking with secure multi-role access.',
-      tech: ['React.js', 'Spring Boot', 'MySQL'],
-      highlights: [
-        'Live order status with role-based access',
-        'Menu and reservation management',
-        'Metrics dashboard for owners'
-      ],
-      github: 'https://github.com/it23223394',
-      demo: '#',
-      date: 'Feb–May 2025',
-      gradient: 'from-amber-500 via-orange-500 to-red-500',
-    },
-    {
-      title: 'Distributed Messaging System',
-      subtitle: 'Fault-Tolerant Messaging',
-      description: 'Leader election, replication, and recovery for a resilient distributed messaging platform.',
-      tech: ['Java', 'Distributed Systems', 'Fault Tolerance'],
-      highlights: [
-        'Raft-inspired leader election',
-        'Replica synchronization and healing',
-        'Chaos testing for node failures'
-      ],
-      github: 'https://github.com/it23223394',
-      demo: '#',
-      date: 'Feb–May 2025',
-      gradient: 'from-indigo-500 via-violet-500 to-purple-500',
-    },
-    {
-      title: 'Dogwood Flora',
-      subtitle: 'Online Floral Shop',
-      description: 'Inventory-first flower shop system with streamlined orders and customer experience.',
-      tech: ['React.js', 'Spring Boot', 'MySQL'],
-      highlights: [
-        'Inventory-aware product pages',
-        'Order processing with status updates',
-        'Admin CRUD with activity logs'
+        'Applied stratified sampling and hypothesis testing (p < 0.001)',
+        'Identified supervisor feedback as key productivity driver',
+        'Generated comprehensive statistical findings and visualizations'
       ],
       github: 'https://github.com/it23223394',
       demo: '#',
       date: 'Jul–Nov 2024',
-      gradient: 'from-rose-500 via-pink-500 to-orange-400',
+      gradient: 'from-emerald-500 via-teal-400 to-cyan-400',
+    },
+    {
+      title: 'AI Study Assistant',
+      subtitle: 'RAG-Based PDF Q&A System',
+      description: 'Developed an intelligent tutor that answers questions from course PDFs using RAG with semantic search and LLM integration.',
+      tech: ['Python', 'Streamlit', 'Groq LLM', 'RAG', 'Vector Embeddings'],
+      highlights: [
+        'Built PDF processing pipeline with local embeddings',
+        'Integrated Groq API for answer generation',
+        'Implemented semantic search for document retrieval'
+      ],
+      github: 'https://github.com/it23223394',
+      demo: 'https://ai-study-assistant-crqnrkbffdabry9uxyjc7z.streamlit.app/',
+      date: 'Dec 2025',
+      gradient: 'from-amber-500 via-orange-500 to-red-500',
     },
   ]
 
@@ -117,7 +87,7 @@ const Projects = () => {
           </h2>
           <div className="w-20 h-1 bg-primary-500 mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            A selection of projects showcasing my skills in full-stack development, AI integration, and system design
+            A selection of data analytics and AI projects showcasing my skills in Python, SQL, statistical analysis, and data visualization
           </p>
         </motion.div>
 
