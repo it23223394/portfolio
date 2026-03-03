@@ -21,14 +21,19 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setStatus('sending')
+    const { name, email, message } = formData
     
-    // Simulate form submission (replace with actual API call)
-    setTimeout(() => {
-      setStatus('success')
-      setFormData({ name: '', email: '', message: '' })
-      setTimeout(() => setStatus(''), 3000)
-    }, 1000)
+    // Create mailto link and open it
+    const subject = encodeURIComponent(`Portfolio Message from ${name}`)
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)
+    const mailtoLink = `mailto:sahajiperera@gmail.com?subject=${subject}&body=${body}`
+    
+    window.location.href = mailtoLink
+    
+    // Show success message
+    setStatus('success')
+    setFormData({ name: '', email: '', message: '' })
+    setTimeout(() => setStatus(''), 3000)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

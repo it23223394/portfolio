@@ -21,10 +21,8 @@ const Projects = () => {
         'Found SMS reminders reduced no-shows by 6.9 percentage points',
         'Built interactive dashboard for operational insights'
       ],
-      github: 'https://github.com/it23223394',
+      github: 'https://github.com/it23223394/Hospital-Appointment-No-Show-Analysis',
       demo: '#',
-      date: 'Jan 2026',
-      gradient: 'from-blue-500 via-cyan-400 to-emerald-400',
     },
     {
       title: 'LinkedIn Job Market Analysis',
@@ -36,7 +34,7 @@ const Projects = () => {
         'Analyzed salary trends and remote work patterns',
         'Generated visual reports for workforce trend analysis'
       ],
-      github: 'https://github.com/it23223394',
+      github: 'https://github.com/it23223394/linkedin-job-analysis',
       demo: '#',
       date: 'Jan 2026',
       gradient: 'from-purple-500 via-fuchsia-500 to-pink-400',
@@ -51,7 +49,7 @@ const Projects = () => {
         'Identified supervisor feedback as key productivity driver',
         'Generated comprehensive statistical findings and visualizations'
       ],
-      github: 'https://github.com/it23223394',
+      github: 'https://github.com/it23223394/Workplace-Productivity-Analysis',
       demo: '#',
       date: 'Jul–Nov 2024',
       gradient: 'from-emerald-500 via-teal-400 to-cyan-400',
@@ -66,9 +64,8 @@ const Projects = () => {
         'Integrated Groq API for answer generation',
         'Implemented semantic search for document retrieval'
       ],
-      github: 'https://github.com/it23223394',
+      github: 'https://github.com/it23223394/ai-study-assistant',
       demo: 'https://ai-study-assistant-crqnrkbffdabry9uxyjc7z.streamlit.app/',
-      date: 'Dec 2025',
       gradient: 'from-amber-500 via-orange-500 to-red-500',
     },
   ]
